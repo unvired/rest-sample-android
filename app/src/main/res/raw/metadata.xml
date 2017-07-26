@@ -1,0 +1,10 @@
+<Application description="Unvired REST Sample" name="UnviredRESTSample" namespace="UNVIRED" package="com.unvired.sample.rest" version="1.0">
+    <BusinessEntity attachments="false" description="" name="WEATHER" onConflict="SERVER_WINS" save="true">
+        <header className="com.unvired.sample.rest.be.WEATHER_HEADER" description="Details" name="WEATHER_HEADER">
+            <Field description="City" isGid="true" length="0" mandatory="true" name="CITY" sqlType="TEXT"/>
+            <Field description="Weather" isGid="false" length="0" mandatory="false" name="WEATHER_DESC" sqlType="TEXT"/>
+            <Field description="Temperature" isGid="false" length="0" mandatory="false" name="TEMPERATURE" sqlType="TEXT"/>
+            <Field description="Humidity" isGid="false" length="0" mandatory="false" name="HUMIDITY" sqlType="TEXT"/>
+        </header>
+    </BusinessEntity>
+</Application>
