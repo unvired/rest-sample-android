@@ -14,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.unvired.database.DBException;
@@ -244,6 +243,9 @@ public class HomeActivity extends AppCompatActivity {
             }
         };
 
+        /*
+        * Always execute Process Agent(PA) in thread
+        */
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -259,7 +261,7 @@ public class HomeActivity extends AppCompatActivity {
                 .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        dialogInterface.dismiss();
                     }
                 }).create();
 
@@ -278,7 +280,6 @@ public class HomeActivity extends AppCompatActivity {
         desc.setText(weather_header.getWEATHER_DESC());
         temp.setText(Utils.getTemperature(weather_header));
         humid.setText(weather_header.getHUMIDITY());
-
     }
 
 }

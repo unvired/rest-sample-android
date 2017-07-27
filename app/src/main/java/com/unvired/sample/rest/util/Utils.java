@@ -11,33 +11,6 @@ import com.unvired.sample.rest.be.WEATHER_HEADER;
 
 public class Utils {
 
-    public static String getUserId() {
-        try {
-            return UserSettingsManager.getInstance().getUnviredUserId();
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public static String getFEUserId() {
-        try {
-            FrameworkManager.getInstance().getFrameworkSettingsManager().getFrontEndUserId();
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public static String getServerURL() {
-        try {
-            FrameworkManager.getInstance().getFrameworkSettingsManager().getServerId();
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public static String getTemperature(WEATHER_HEADER header){
         String temp = header.getTEMPERATURE();
 

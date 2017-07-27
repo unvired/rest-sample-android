@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.unvired.core.FrameworkVersion;
 import com.unvired.database.DBException;
 import com.unvired.exception.ApplicationException;
 import com.unvired.logger.Logger;
@@ -25,8 +24,6 @@ import com.unvired.model.ApplicationVersion;
 import com.unvired.sample.rest.R;
 import com.unvired.sample.rest.util.Constants;
 import com.unvired.sample.rest.util.PermissionHelper;
-import com.unvired.sample.rest.util.UnviredAppPreference;
-import com.unvired.sample.rest.util.Utils;
 import com.unvired.utils.FrameworkHelper;
 
 import java.io.InputStream;
@@ -72,6 +69,9 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
 
     private void initialize() {
 
+        /*
+        * Check and obtain basic user permissions
+        */
         List<String> permissionList = new ArrayList<>();
 
         if (!PermissionHelper.hasPhonePermission(this)) {
@@ -90,7 +90,7 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
 
     public void initializeFramework(Context context) {
         /*
-        *Initial Crashlytics here if needed
+        * Initialize Framework parameters as per Documentation
         */
 
         String metaDataXml = null;
@@ -127,6 +127,9 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
         this.finish();
     }
 
+    /*
+    * Required only for GCM
+    */
     private void checkGooglePlayServices() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -157,7 +160,6 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
 
                 //***************GCM End************************
 
-                saveCustomKeys();
                 navigateToHomeActivity();
 
                 break;
@@ -205,15 +207,6 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
                 builder.show();
                 break;
         }
-    }
-
-    private void saveCustomKeys() {
-        UnviredAppPreference unviredAppPreference = new UnviredAppPreference(this, "UNVIRED_APP_PREF_KEY", Constants.UNVIRED_APP_PREFERENCE_KEY, true);
-        unviredAppPreference.put("APPLICATION_VERSION", FrameworkVersion.getApplicationVersion());
-        unviredAppPreference.put("FRAMEWORK_VERSION", FrameworkVersion.getFrameworkVersion());
-        unviredAppPreference.put("USER_ID", Utils.getUserId());
-        unviredAppPreference.put("FEUSERID", Utils.getFEUserId());
-        unviredAppPreference.put("SERVER_URL", Utils.getServerURL());
     }
 
     private void navigateToHomeActivity() {
