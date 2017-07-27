@@ -17,7 +17,7 @@
     <string name="errorPlayService">Something wrong with Google Play Services. Please enable/check. </string>
     <string name="notConnected">Not connected</string>
     <string name="actionsNotEnabled">No action is enabled for you on this alert,please contact your administrator.</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_activity_home">@string/app_name</string>
     <string name="title_activity_create_person">Create Person</string>
     <string name="title_activity_get_person">Get Person</string>
 </resources>
