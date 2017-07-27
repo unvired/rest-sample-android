@@ -68,10 +68,10 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
     }
 
     private void initialize() {
-
         /*
         * Check and obtain basic user permissions
         */
+
         List<String> permissionList = new ArrayList<>();
 
         if (!PermissionHelper.hasPhonePermission(this)) {
