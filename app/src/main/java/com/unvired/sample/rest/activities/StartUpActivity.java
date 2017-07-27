@@ -89,25 +89,9 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
     }
 
     public void initializeFramework(Context context) {
-
-        UnviredAppPreference ShoutPreference = new UnviredAppPreference(context, "UNVIRED_APP_PREF_KEY", Constants.UNVIRED_APP_PREFERENCE_KEY, true);
-//        Fabric.with(context, new Crashlytics());
-        if (ShoutPreference != null) {
-            String applicationVersion = ShoutPreference.getString("APPLICATION_VERSION");
-            String frameworkVersion = ShoutPreference.getString("FRAMEWORK_VERSION");
-            String userId = ShoutPreference.getString("USER_ID");
-            String feUserId = ShoutPreference.getString("FEUSERID");
-            String serverURL = ShoutPreference.getString("SERVER_URL");
-            String screenName = ShoutPreference.getString("SCREEN_NAME");
-
-           /* Crashlytics.setString("APPLICATION_VERSION:", applicationVersion);
-            Crashlytics.setString("FRAMEWORK_VERSION:", frameworkVersion);
-            Crashlytics.setString("FE_USER_ID:", feUserId);
-            Crashlytics.setString("SERVER_URL:", serverURL);
-            Crashlytics.setUserIdentifier(userId);
-            if (!Strings.isNullOrEmpty(screenName))
-                Crashlytics.setString("SCREEN_NAME", screenName);*/
-        }
+        /*
+        *Initial Crashlytics here if needed
+        */
 
         String metaDataXml = null;
 
@@ -123,8 +107,6 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
         LoginParameters.setMetaDataXml(metaDataXml);
         LoginParameters.setLoginListener(this);
         LoginParameters.setDemoModeRequired(false);
-//        LoginParameters.setDemoData(demoDataInputStream);
-//        LoginParameters.setDemoModeListener(roundOrdersDemomodeListener);
         LoginParameters.setContext(context);
         LoginParameters.showCompanyField(true);
         LoginParameters.setAppName(Constants.APPLICATION_NAME);
