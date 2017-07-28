@@ -6,7 +6,8 @@ package com.unvired.sample.rest.util;
 
 public class Constants {
     // App Name
-    public static final String APPLICATION_NAME = "Unvired REST Sample";
+    public static final String APPLICATION_NAME = "UnviredRESTSample";
+    public static final String APPLICATION_TITLE = "Unvired REST Sample";
 
     // BE Names
     public static final String BE_WEATHER = "WEATHER";

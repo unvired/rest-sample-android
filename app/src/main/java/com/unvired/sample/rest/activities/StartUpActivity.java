@@ -103,7 +103,7 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
         }
 
         LoginParameters.setUrl(URL);
-        LoginParameters.setAppTitle(getResources().getText(R.string.app_name).toString());
+        LoginParameters.setAppTitle(Constants.APPLICATION_TITLE);
         LoginParameters.setMetaDataXml(metaDataXml);
         LoginParameters.setLoginListener(this);
         LoginParameters.setDemoModeRequired(false);
