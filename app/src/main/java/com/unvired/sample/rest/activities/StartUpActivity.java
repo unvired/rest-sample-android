@@ -103,13 +103,13 @@ public class StartUpActivity extends AppCompatActivity implements LoginListener 
 
         LoginParameters.setUrl(URL);
         LoginParameters.setAppTitle(Constants.APPLICATION_TITLE);
+        LoginParameters.setAppName(Constants.APPLICATION_NAME);
         LoginParameters.setMetaDataXml(metaDataXml);
         LoginParameters.setLoginListener(this);
-        LoginParameters.setDemoModeRequired(false);
-        LoginParameters.setContext(context);
-        LoginParameters.showCompanyField(true);
-        LoginParameters.setAppName(Constants.APPLICATION_NAME);
         LoginParameters.setLoginTypes(new LoginParameters.LOGIN_TYPE[]{LOGIN_TYPE.UNVIRED_ID});
+        LoginParameters.setDemoModeRequired(false);
+        LoginParameters.showCompanyField(true);
+        LoginParameters.setContext(context);
 
         ApplicationVersion.setBUILD_NUMBER("1");
 
