@@ -1,8 +1,5 @@
 package com.unvired.sample.rest.util;
 
-import com.unvired.core.FrameworkManager;
-import com.unvired.core.UserSettingsManager;
-import com.unvired.database.DBException;
 import com.unvired.sample.rest.be.WEATHER_HEADER;
 
 /**
@@ -11,16 +8,15 @@ import com.unvired.sample.rest.be.WEATHER_HEADER;
 
 public class Utils {
 
-    public static String getTemperature(WEATHER_HEADER header){
+    public static String getTemperature(WEATHER_HEADER header) {
         String temp = header.getTEMPERATURE();
 
-        temp = temp.replace(" degree",""+ (char) 0x00B0);
-        temp = temp.replace(" Degree",""+ (char) 0x00B0);
-        temp = temp.replace(" Celsius","C");
-        temp = temp.replace(" celsius","C");
+        temp = temp.replace(" degree", "" + (char) 0x00B0);
+        temp = temp.replace(" Degree", "" + (char) 0x00B0);
+        temp = temp.replace(" Celsius", "C");
+        temp = temp.replace(" celsius", "C");
 
         return temp;
     }
-
 }
 

@@ -1,6 +1,7 @@
 package com.unvired.sample.rest.util;
 
 import com.unvired.exception.ApplicationException;
+import com.unvired.logger.Logger;
 import com.unvired.sample.rest.be.WEATHER_HEADER;
 import com.unvired.sync.SyncConstants;
 import com.unvired.sync.SyncEngine;
@@ -20,9 +21,9 @@ public class PAHelper {
         try {
             SyncEngine.getInstance().submitInSyncMode(SyncConstants.MESSAGE_REQUEST_TYPE.PULL, header, "", Constants.PA_GET_WEATHER, false, callback);
         } catch (ApplicationException e) {
-            e.printStackTrace();
+            Logger.e(e.getMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.e(e.getMessage());
         }
 
     }

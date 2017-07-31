@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.unvired.database.DBException;
 import com.unvired.exception.ApplicationException;
 import com.unvired.logger.Logger;
 import com.unvired.login.AuthenticationService;
