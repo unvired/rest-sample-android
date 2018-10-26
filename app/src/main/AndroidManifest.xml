@@ -19,35 +19,6 @@
 
         <activity android:name=".activities.HomeActivity" />
 
-        <!-- GCM Start -->
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.unvired.chyme" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".util.GCMIntentService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.unvired.gcm.RegistrationIntentService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
-            </intent-filter>
-        </service>
-
-        <!-- GCM End -->
     </application>
 
 </manifest>
