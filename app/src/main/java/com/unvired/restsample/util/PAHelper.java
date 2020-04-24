@@ -1,8 +1,8 @@
-package com.unvired.sample.rest.util;
+package com.unvired.restsample.util;
 
 import com.unvired.exception.ApplicationException;
 import com.unvired.logger.Logger;
-import com.unvired.sample.rest.be.WEATHER_HEADER;
+import com.unvired.restsample.be.WEATHER_HEADER;
 import com.unvired.sync.SyncConstants;
 import com.unvired.sync.SyncEngine;
 import com.unvired.sync.out.ISyncAppCallback;

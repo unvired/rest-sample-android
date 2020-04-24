@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.be;
+package com.unvired.restsample.be;
 
 import com.unvired.database.DBException;
 import com.unvired.model.DataStructure;

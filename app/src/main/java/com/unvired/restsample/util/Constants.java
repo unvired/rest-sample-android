@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.util;
+package com.unvired.restsample.util;
 
 /**
  * Created by nishchith on 24/07/17.

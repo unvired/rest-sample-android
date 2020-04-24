@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.util;
+package com.unvired.restsample.util;
 
 import android.Manifest;
 import android.app.Activity;

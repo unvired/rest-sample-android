@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.activities;
+package com.unvired.restsample.activities;
 
 import android.Manifest;
 import android.content.Context;
@@ -15,9 +15,9 @@ import com.unvired.login.LoginParameters;
 import com.unvired.login.LoginParameters.LOGIN_TYPE;
 import com.unvired.login.UnviredAccount;
 import com.unvired.model.ApplicationVersion;
-import com.unvired.sample.rest.R;
-import com.unvired.sample.rest.util.Constants;
-import com.unvired.sample.rest.util.PermissionHelper;
+import com.unvired.sample.restsample.R;
+import com.unvired.restsample.util.Constants;
+import com.unvired.restsample.util.PermissionHelper;
 import com.unvired.utils.FrameworkHelper;
 
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.activities;
+package com.unvired.restsample.activities;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -19,11 +19,11 @@ import android.widget.TextView;
 import com.unvired.database.DBException;
 import com.unvired.database.IDataStructure;
 import com.unvired.model.InfoMessage;
-import com.unvired.sample.rest.R;
-import com.unvired.sample.rest.be.WEATHER_HEADER;
-import com.unvired.sample.rest.util.Constants;
-import com.unvired.sample.rest.util.PAHelper;
-import com.unvired.sample.rest.util.Utils;
+import com.unvired.sample.restsample.R;
+import com.unvired.restsample.be.WEATHER_HEADER;
+import com.unvired.restsample.util.Constants;
+import com.unvired.restsample.util.PAHelper;
+import com.unvired.restsample.util.Utils;
 import com.unvired.sync.out.ISyncAppCallback;
 import com.unvired.sync.response.ISyncResponse;
 import com.unvired.sync.response.SyncBEResponse;

@@ -1,6 +1,6 @@
-package com.unvired.sample.rest.util;
+package com.unvired.restsample.util;
 
-import com.unvired.sample.rest.be.WEATHER_HEADER;
+import com.unvired.restsample.be.WEATHER_HEADER;
 
 /**
  * Created by nishchith on 24/07/17.
