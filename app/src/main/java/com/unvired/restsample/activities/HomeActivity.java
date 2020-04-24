@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.unvired.database.DBException;
 import com.unvired.database.IDataStructure;
 import com.unvired.model.InfoMessage;
-import com.unvired.sample.restsample.R;
+import com.unvired.restsample.R;
 import com.unvired.restsample.be.WEATHER_HEADER;
 import com.unvired.restsample.util.Constants;
 import com.unvired.restsample.util.PAHelper;
