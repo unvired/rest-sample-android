@@ -15,9 +15,9 @@ import com.unvired.login.LoginParameters;
 import com.unvired.login.LoginParameters.LOGIN_TYPE;
 import com.unvired.login.UnviredAccount;
 import com.unvired.model.ApplicationVersion;
+import com.unvired.restsample.util.PermissionHelper;
 import com.unvired.restsample.R;
 import com.unvired.restsample.util.Constants;
-import com.unvired.restsample.util.PermissionHelper;
 import com.unvired.utils.FrameworkHelper;
 
 import java.io.InputStream;
