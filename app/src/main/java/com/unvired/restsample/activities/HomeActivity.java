@@ -11,15 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.unvired.database.DBException;
 import com.unvired.database.IDataStructure;
 import com.unvired.model.InfoMessage;
-import com.unvired.sample.restsample.R;
+import com.unvired.restsample.R;
 import com.unvired.restsample.be.WEATHER_HEADER;
 import com.unvired.restsample.util.Constants;
 import com.unvired.restsample.util.PAHelper;
@@ -68,7 +70,10 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (city.getText() == null || city.getText().toString().trim().isEmpty()) {
-                    ((TextInputLayout) city.getParentForAccessibility()).setError("Please provide city");
+                   // ((TextInputLayout) city.getParentForAccessibility()).setError("Please provide city");
+                    Toast toast = Toast.makeText(getApplicationContext(),"Enter city name",Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                     city.requestFocus();
                     return;
                 }

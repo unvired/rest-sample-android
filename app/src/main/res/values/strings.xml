@@ -4,7 +4,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
 
-    <string name="personDownloadSuccess">Person Downloaded.</string>
+    <string name="personDownloadSuccess">Invalid city name</string>
     <string name="personCreateSuccess">Person created.</string>
     <string name="invalidResponse">No valid response from server</string>
 
